@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Tom Select Example</title>
+  <link href="https://cdn.jsdelivr.net/npm/tom-select@2.2.2/dist/css/tom-select.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <label for="tags">Tags:</label>
+  <select id="tags" multiple placeholder="Type and select...">
+    <option value="Linux">Linux</option>
+    <option value="Docker">Docker</option>
+    <option value="Ansible">Ansible</option>
+    <option value="Kubernetes">Kubernetes</option>
+    <option value="Terraform">Terraform</option>
+  </select>
+
+  <script src="https://cdn.jsdelivr.net/npm/tom-select@2.2.2/dist/js/tom-select.complete.min.js"></script>
+  <script>
+    new TomSelect("#tags", {
+      create: true,
+      maxItems: 10,
+      plugins: ['remove_button'],
+    });
+  </script>
+
+</body>
+</html>
